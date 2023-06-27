@@ -6,10 +6,10 @@ def call(string stageName){
   } 
   else if ("${stageName}" == "SonarQube Report")
   {
-    sh "echo 'Testing'"
+    sh "mvn sonar:sonar"
   }
   else if ("${stageName}" == "Upload Into Nexus")
   {
-    sh "echo Deploying"
+    sh "mvn deploy"
   }
 }
